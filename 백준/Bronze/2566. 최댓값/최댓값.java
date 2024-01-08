@@ -18,23 +18,19 @@ public class Main {
         }
 
         int minValue = Integer.MIN_VALUE;
-
+        int x = 0;
+        int y = 0;
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 if (arrange[i][j] > minValue) {
                     minValue = arrange[i][j];
+                    x = i+1;
+                    y = j+1;
                 }
             }
         }
-        FINAL : for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                if (arrange[i][j] == minValue) {
-                    System.out.println(minValue);
-                    System.out.print((i+1) + " " + (j+1));
-                    break FINAL;
-                }
-            }
-        }
+        System.out.println(minValue);
+        System.out.println(x + " " + y);
 
     }
 }
