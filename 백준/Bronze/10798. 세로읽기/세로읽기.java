@@ -5,12 +5,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String[][] words = new String[5][15];
-
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 15; j++) {
-                words[i][j] = "-1";
-            }
-        }
+        StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < 5; i++) {
             String word = br.readLine();
@@ -21,7 +16,7 @@ public class Main {
         A:
         for (int i = 0; i < 15; i++) {
             for (int j = 0; j < 5; j++) {
-                if (!words[j][i].equals("-1")) System.out.print(words[j][i]);
+                if (words[j][i]!=null) System.out.print(words[j][i]);
             }
         }
     }
