@@ -5,8 +5,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String[][] words = new String[5][15];
-        StringBuilder sb = new StringBuilder();
-
+    
         for (int i = 0; i < 5; i++) {
             String word = br.readLine();
             for (int j = 0; j < word.length(); j++) {
